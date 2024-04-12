@@ -1,0 +1,257 @@
+* {
+  box-sizing: border-box;
+  position: relative;
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100dvh;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  text-wrap: balance;
+}
+
+p {
+  text-wrap: pretty;
+}
+
+input {
+  outline: none;
+  border: none;
+}
+
+/* clears the ‘X’ from Internet Explorer */
+input[type='search']::-ms-clear {
+  display: none;
+  width: 0;
+  height: 0;
+}
+input[type='search']::-ms-reveal {
+  display: none;
+  width: 0;
+  height: 0;
+}
+/* clears the ‘X’ from Chrome */
+input[type='search']::-webkit-search-decoration,
+input[type='search']::-webkit-search-cancel-button,
+input[type='search']::-webkit-search-results-button,
+input[type='search']::-webkit-search-results-decoration {
+  display: none;
+}
+
+:root {
+  --font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans',
+    Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji';
+
+  --font-family-mono: SFMono-Medium, 'SF Mono', 'Segoe UI Mono', 'Roboto Mono',
+    'Ubuntu Mono', Menlo, Consolas, Courier, monospaceSFMono-Medium, SF Mono,
+    Segoe UI Mono, Roboto Mono, Ubuntu Mono, Menlo, Consolas, Courier, monospace;
+
+  --grey: #8e8e93;
+  --grey-2: #aeaeb2;
+  --grey-3: #c7c7cc;
+  --grey-4: #d1d1d6;
+  --grey-5: #e5e5ea;
+  --grey-5-dark: #656d76;
+  --grey-6: #f2f3f7;
+
+  --bg-primary: #ffffff;
+  --bg-secondary: #f6f8fa;
+
+  --text-primary: #0c0c0c;
+  --text-secondary: #636c76;
+
+  --radius-s: 4px;
+  --radius-m: 8px;
+  --radius-l: 12px;
+  --radius-full: 100%;
+
+  --spacing-tiny: 2px;
+  --spacing-xxs: 4px;
+  --spacing-xs: 8px;
+  --spacing-s: 12px;
+  --spacing-m: 16px;
+  --spacing-l: 20px;
+  --spacing-xl: 24px;
+  --spacing-xxl: 40px;
+
+  --shadow-l: 0 1px 3px rgba(31, 35, 40, 0.12),
+    0 8px 24px rgba(66, 74, 83, 0.12);
+  --shadow-m: 0 2px 4px rgba(31, 35, 40, 0.10),
+    0 2px 12px rgba(66, 74, 83, 0.06);
+  --shadow-s: 0 0 2px rgba(31, 35, 40, 0.06),
+    0 2px 6px rgba(66, 74, 83, 0.02);
+  --shadow-xs: 0 0 2px rgba(31, 35, 40, 0.06),
+    0 2px 2px rgba(66, 74, 83, 0.02);
+}
+
+#root {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+
+  font-family: var(--font-family);
+  color: var(--text-primary)
+}
+
+h1 {
+  font-family: var(--font-family);
+  font-size: 96px;
+  font-weight: 600;
+}
+
+h2 {
+  font-family: var(--font-family);
+  font-size: 52px;
+  font-weight: 600;
+}
+
+h3 {
+  font-family: var(--font-family);
+  font-size: 44px;
+  font-weight: 600;
+}
+
+h4 {
+  font-family: var(--font-family);
+  font-size: 36px;
+  font-weight: 600;
+}
+
+h5 {
+  font-family: var(--font-family);
+  font-size: 28px;
+  font-weight: 600;
+}
+
+h6 {
+  font-family: var(--font-family);
+  font-size: 24px;
+  font-weight: 600;
+}
+
+p {
+  font-family: var(--font-family);
+  font-size: 24px;
+  font-weight: 300;
+}
+
+p.emphasis {
+  font-weight: 500;
+}
+
+.flex {
+  display: flex;
+}
+
+.inline-flex {
+  display: inline-flex;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.flex-row {
+  flex-direction: row;
+}
+
+.flex-row-reverse {
+  flex-direction: row-reverse;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.flex-auto {
+  flex: 1 1 auto;
+}
+
+.flex-zero-auto {
+  flex: 0 0 auto;
+}
+
+.flex-none {
+  flex: none;
+}
+
+.items-start {
+  align-items: flex-start;
+}
+
+.items-end {
+  align-items: flex-end;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.items-baseline {
+  align-items: baseline;
+}
+
+.items-stretch {
+  align-items: stretch;
+}
+
+.justify-start {
+  justify-content: flex-start;
+}
+
+.justify-end {
+  justify-content: flex-end;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.justify-around {
+  justify-content: space-around;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.content-start {
+  align-content: flex-start;
+}
+
+.content-end {
+  align-content: flex-end;
+}
+
+.content-center {
+  align-content: center;
+}
+
+.content-between {
+  align-content: space-between;
+}
+
+.content-around {
+  align-content: space-around;
+}
+
+.content-stretch {
+  align-content: stretch;
+}
+
+.fill-width {
+  width: 100%;
+  max-width: 100%;
+}
+
+.fill-height {
+  height: 100%;
+  max-height: 100%;
+}

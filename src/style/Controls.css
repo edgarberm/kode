@@ -1,0 +1,15 @@
+.controls {
+  position: absolute;
+  bottom: var(--spacing-l);
+  left: 50%;
+  transform: translateX(-50%);
+
+  width: 320px;
+  height: 40px;
+  background-color: red;
+  z-index: 9;
+}
+
+.controls:focus {
+  outline: none;
+}

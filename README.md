@@ -1,2 +1,3 @@
-# kode
-Source for PK coding workshop
+# Nukbo
+
+This repo contains the source code for the PK workshop.
